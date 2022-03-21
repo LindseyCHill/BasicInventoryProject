@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="1058.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafa00" height="290.0" layoutX="15.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="490.0" />
+      <TableView id="partTableView" fx:id="partTableView" layoutX="23.0" layoutY="110.0" prefHeight="200.0" prefWidth="475.0">
+         <columns>
+            <TableColumn fx:id="partIdClm" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="partNameClm" prefWidth="147.2000274658203" text="Part Name" />
+            <TableColumn fx:id="partStockClm" prefWidth="112.79998779296875" text="Inventory Level" />
+            <TableColumn fx:id="partPriceClm" prefWidth="135.20001220703125" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="deletePartButton" layoutX="433.0" layoutY="317.0" mnemonicParsing="false" onAction="#deletePartTrigger" text="Delete" />
+      <Button fx:id="modifyPartButton" layoutX="372.0" layoutY="317.0" mnemonicParsing="false" onAction="#modifyPartTrigger" text="Modify" />
+      <Button fx:id="addPartButton" layoutX="314.0" layoutY="317.0" mnemonicParsing="false" onAction="#addPartTrigger" prefHeight="26.0" prefWidth="50.0" text="Add" />
+      <Label layoutX="31.0" layoutY="91.0" prefHeight="18.0" prefWidth="44.0" text="Parts">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchPart" layoutX="315.0" layoutY="83.0" onKeyPressed="#searchPartFunction" prefHeight="26.0" prefWidth="170.0" promptText="Search By Part ID or Name" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fafafa00" height="290.0" layoutX="553.0" layoutY="67.0" stroke="BLACK" strokeType="INSIDE" width="490.0" />
+      <TableView id="partTableView" fx:id="productTableView" layoutX="561.0" layoutY="110.0" prefHeight="200.0" prefWidth="475.0">
+         <columns>
+            <TableColumn fx:id="productIdClm" prefWidth="75.0" text="Product ID" />
+            <TableColumn fx:id="productNameClm" prefWidth="147.2000274658203" text="Product Name" />
+            <TableColumn fx:id="productStockClm" prefWidth="112.79998779296875" text="Inventory Level" />
+            <TableColumn fx:id="productPriceClm" prefWidth="135.20001220703125" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <Button layoutX="971.0" layoutY="317.0" mnemonicParsing="false" onAction="#deleteProductTrigger" text="Delete" />
+      <Button layoutX="910.0" layoutY="317.0" mnemonicParsing="false" onAction="#modifyProductTrigger" text="Modify" />
+      <Button layoutX="852.0" layoutY="317.0" mnemonicParsing="false" onAction="#addProductTrigger" prefHeight="26.0" prefWidth="50.0" text="Add" />
+      <Label layoutX="569.0" layoutY="91.0" prefHeight="18.0" prefWidth="64.0" text="Products">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchProduct" layoutX="853.0" layoutY="83.0" onKeyPressed="#searchProductFunction" prefHeight="26.0" prefWidth="170.0" promptText="Search By Product ID or Name" />
+      <Label fx:id="MainErrorMessage" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="23.0" prefHeight="18.0" prefWidth="1023.0" textAlignment="CENTER" textFill="#ef0c0c" visible="false">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <Button layoutX="945.0" layoutY="362.0" mnemonicParsing="false" onAction="#exitButtonTrigger" text="Exit" />
+   </children>
+</AnchorPane>
